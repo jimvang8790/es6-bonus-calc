@@ -1,4 +1,4 @@
-class Employee {
+var Employee = class Employee {
   constructor(name, startDate, salary, reviewRating) {
     this.name = name;
     this.startDate = new Date(startDate);
@@ -14,3 +14,5 @@ class Employee {
     return diffDays;
   }
 }
+
+module.exports = Employee;

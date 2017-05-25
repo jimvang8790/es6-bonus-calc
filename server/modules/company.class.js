@@ -1,4 +1,6 @@
-class Company {
+var Employee = require('./employee.class');
+
+var Company = class Company {
 
   constructor(name) {
     this.name =
@@ -62,3 +64,5 @@ class Company {
 
 
 }
+
+module.exports = Company;
