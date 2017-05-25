@@ -3,6 +3,10 @@ class Company {
   constructor(name) {
     this.name =
     this.employees = [];
+    this.longevityDays = 365;
+    this.incomeBonusCap = 65000;
+    this.maxBonusPercentage = .13;
+    this.minBonusPercentage = 0;
   }
 
   addEmployee(name, startDate, salary, reviewRating) {
@@ -11,26 +15,26 @@ class Company {
   }
 
   // go through all employees and calc bonuses
-  calculateBonuses() {   
+  calculateBonuses() {
 
     for (var emp of this.employees) {
       let baseBonusPercent = this.getBaseBonusPercentage(emp.reviewRating);
 
       // longevity
-      if(emp.daysAtCompany() > 365) {
+      if(emp.daysAtCompany() > this.longevityDays) {
         baseBonusPercent += .05;
       }
 
       // income cap
-      if(emp.salary > 65000) {
+      if(emp.salary > this.incomeBonusCap) {
         baseBonusPercent -= .01;
       }
 
-      if(baseBonusPercent > .13) {
+      if(baseBonusPercent > this.maxBonusPercentage) {
         baseBonusPercent = .13;
       }
 
-      if(baseBonusPercent < 0) {
+      if(baseBonusPercent < this.minBonusPercentage) {
         baseBonusPercent = 0;
       }
 
