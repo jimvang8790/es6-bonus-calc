@@ -3,7 +3,7 @@ let Employee = require('./employee.class');
 let Company = class Company {
 
   constructor(name) {
-    this.name =
+    this.name = name;
     this.employees = [];
     this.longevityDays = 365;
     this.incomeBonusCap = 65000;
