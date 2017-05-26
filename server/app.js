@@ -1,8 +1,7 @@
-var Company = require('./modules/company.class');
-
 var app = require('express')();
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 3000;
+var Company = require('./modules/company.class');
 
 var myCompany = new Company('My Company');
 
