@@ -1,6 +1,6 @@
 let Employee = require('./employee.class');
 
-let Company = class Company {
+class Company {
 
   constructor(name) {
     this.name = name;
