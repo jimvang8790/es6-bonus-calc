@@ -1,4 +1,4 @@
-let Employee = class Employee {
+class Employee {
   constructor(name, startDate, salary, reviewRating) {
     this.name = name;
     this.startDate = new Date(startDate);
